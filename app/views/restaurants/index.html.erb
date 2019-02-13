@@ -1,0 +1,13 @@
+<div class="wrapper-light-red">
+</div>
+<div class="container text-center">
+  <h2>Here is the list of our restaurants :</h2>
+  <div class="card-restaurant">
+    <% @restaurants.each do |restaurant| %>
+      <h3>
+        <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
+      </h3>
+      <p><%= restaurant.category %></p>
+    <% end %>
+    </div>
+</div>
